@@ -83,7 +83,7 @@ export function openDatabase(
       .get(phone);
     if (existing && existing.role !== "admin")
       throw Error("ADMIN_PHONE belongs to a customer; choose another phone");
-    if (!existing)
+    if (!existing) {
       db.prepare(
         "INSERT INTO users(id,phone,name,role,password) VALUES(?,?,?,?,?)",
       ).run(
@@ -93,6 +93,11 @@ export function openDatabase(
         "admin",
         passwordHash(process.env.ADMIN_PASSWORD),
       );
+    } else {
+      db.prepare(
+        "UPDATE users SET password=? WHERE phone=? AND role='admin'",
+      ).run(passwordHash(process.env.ADMIN_PASSWORD), phone);
+    }
   }
   return db;
 }
