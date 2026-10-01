@@ -10,5 +10,5 @@ export default defineConfig({
     strictPort: true,
     proxy: { "/api": `http://127.0.0.1:${process.env.PORT || 3104}` },
   },
-  build: { outDir: "../../dist/web", emptyOutDir: true },
+  build: { outDir: "../../dist", emptyOutDir: true },
 });

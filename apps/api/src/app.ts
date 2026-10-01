@@ -1,5 +1,6 @@
 import express from "express";
 import { resolve } from "node:path";
+import { existsSync } from "node:fs";
 import { ZodError } from "zod";
 import type { DB } from "./db/database.js";
 import { authenticate } from "./middleware/auth.js";
@@ -47,9 +48,12 @@ export function createApp(db: DB) {
   app.use("/api", (_req, res) =>
     res.status(404).json({ error: "Endpoint not found." }),
   );
-  app.use(express.static(resolve("dist/web")));
+  const webDir = existsSync(resolve("dist/web"))
+    ? resolve("dist/web")
+    : resolve("dist");
+  app.use(express.static(webDir));
   app.get("/{*path}", (_req, res) =>
-    res.sendFile(resolve("dist/web/index.html")),
+    res.sendFile(resolve(webDir, "index.html")),
   );
   app.use(
     (
