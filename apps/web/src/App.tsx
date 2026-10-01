@@ -9,15 +9,16 @@ import {
 } from "lucide-react";
 import type { Product, User } from "../../../packages/shared/src/types";
 import { api } from "./lib/api";
+import { DEFAULT_PRODUCTS } from "./lib/defaultProducts";
 import { Catalogue } from "./pages/Catalogue";
 import { Workspace } from "./pages/Workspace";
 import { AuthModal } from "./components/AuthModal";
 import { MaterialList } from "./components/MaterialList";
 import { Modal } from "./components/UI";
 export default function App() {
-  const [products, setProducts] = useState<Product[]>([]),
+  const [products, setProducts] = useState<Product[]>(DEFAULT_PRODUCTS),
     [user, setUser] = useState<User | null>(null),
-    [demoAuth, setDemoAuth] = useState(false),
+    [demoAuth, setDemoAuth] = useState(true),
     [view, setView] = useState(
       location.hash === "#workspace" ? "workspace" : "catalogue",
     ),
@@ -51,20 +52,33 @@ export default function App() {
     }
   }
   async function refreshUser() {
-    const data = await api<{ user: User | null; demoAuth: boolean }>(
-      "/auth/me",
-    );
-    setUser(data.user);
-    setDemoAuth(data.demoAuth);
+    try {
+      const data = await api<{ user: User | null; demoAuth: boolean }>(
+        "/auth/me",
+      );
+      setUser(data.user);
+      setDemoAuth(data.demoAuth);
+    } catch {
+      setUser(null);
+      setDemoAuth(true);
+    }
   }
   async function refreshProducts() {
-    setProducts(await api<Product[]>("/products"));
+    try {
+      const data = await api<Product[]>("/products");
+      if (Array.isArray(data) && data.length > 0) {
+        setProducts(data);
+      }
+    } catch {
+      // In standalone frontend deployments (e.g. Vercel preview), fallback to verified default catalogue
+      setProducts(DEFAULT_PRODUCTS);
+    }
   }
   async function init() {
     setLoading(true);
     setError("");
     try {
-      await Promise.all([refreshUser(), refreshProducts()]);
+      await Promise.allSettled([refreshUser(), refreshProducts()]);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -168,7 +182,7 @@ export default function App() {
         </div>
       </header>
       <main>
-        {error && (
+        {error && products.length === 0 && (
           <div className="error" role="alert">
             Could not connect to the server: {error}{" "}
             <button className="text-button" onClick={() => void init()}>

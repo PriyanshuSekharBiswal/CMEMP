@@ -3,7 +3,8 @@ export async function api<T>(
   method = "GET",
   body?: unknown,
 ): Promise<T> {
-  const response = await fetch(`/api${path}`, {
+  const base = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+  const response = await fetch(`${base}/api${path}`, {
     method,
     credentials: "same-origin",
     headers: {
@@ -12,6 +13,10 @@ export async function api<T>(
     },
     ...(body === undefined ? {} : { body: JSON.stringify(body) }),
   });
+  const contentType = response.headers.get("content-type") || "";
+  if (!contentType.includes("application/json")) {
+    throw new Error("Backend API service is not reachable");
+  }
   const data = await response.json();
   if (!response.ok)
     throw new Error(data.error || "Unable to complete the request");
