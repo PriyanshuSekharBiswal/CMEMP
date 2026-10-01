@@ -1,0 +1,463 @@
+{
+  "products": [
+    {
+      "id": "MAT-TMT-001",
+      "sku": "TATA-TIS-550D-12MM",
+      "erpCode": "ERP-STL-7701",
+      "name": "Tata Tiscon 550D Super Ductile TMT Rebar",
+      "category": "Steel & Structural",
+      "subCategory": "TMT Rebars",
+      "brand": "Tata Tiscon",
+      "manufacturer": "Tata Steel Ltd.",
+      "badge": "Primary Steel",
+      "tagline": "Superior seismic resistance & high elongation",
+      "rating": 4.9,
+      "reviewsCount": 342,
+      "images": [
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerTonne": 64500,
+      "unit": "Tonne",
+      "hsnCode": "72142090",
+      "gstRate": 18,
+      "specs": {
+        "grade": "Fe 550D (Super Ductile)",
+        "diameter": "12 mm",
+        "length": "12 Meters standard",
+        "isStandard": "IS: 1786 (Grade Fe 550D)",
+        "yieldStress": "550 N/mm² (Min)",
+        "ultimateTensileStrength": "600 N/mm² (Min)",
+        "elongationPercent": "16.0% (Superior Energy Absorption)",
+        "corrosionResistance": "High - Low Carbon & Controlled Chemistry",
+        "weightPerPiece": "10.66 kg / bar",
+        "piecesPerBundle": "8 bars",
+        "bundleWeight": "85.28 kg"
+      },
+      "tierDiscounts": [
+        {
+          "minTonnage": 1,
+          "discountPct": 0
+        },
+        {
+          "minTonnage": 5,
+          "discountPct": 2.5
+        },
+        {
+          "minTonnage": 15,
+          "discountPct": 4
+        }
+      ],
+      "recommendedFor": [
+        "High-rise columns",
+        "Heavy foundation footings",
+        "Seismic zones IV & V"
+      ]
+    },
+    {
+      "id": "MAT-TMT-002",
+      "sku": "JIN-PAN-550D-12MM",
+      "erpCode": "ERP-STL-7702",
+      "name": "Jindal Panther Fe 550D TMT Rebars",
+      "category": "Steel & Structural",
+      "subCategory": "TMT Rebars",
+      "brand": "Jindal Panther",
+      "manufacturer": "Jindal Steel & Power Ltd.",
+      "badge": "Primary Steel",
+      "tagline": "Consistent rib pattern for ultra-high concrete bond",
+      "rating": 4.8,
+      "reviewsCount": 219,
+      "images": [
+        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerTonne": 62800,
+      "unit": "Tonne",
+      "hsnCode": "72142090",
+      "gstRate": 18,
+      "specs": {
+        "grade": "Fe 550D",
+        "diameter": "12 mm",
+        "length": "12 Meters",
+        "isStandard": "IS: 1786 (Fe 550D)",
+        "yieldStress": "550 N/mm² (Min)",
+        "ultimateTensileStrength": "585 N/mm²",
+        "elongationPercent": "15.0%",
+        "corrosionResistance": "TMT Quenched & Self-Tempered",
+        "weightPerPiece": "10.65 kg / bar",
+        "piecesPerBundle": "8 bars",
+        "bundleWeight": "85.20 kg"
+      },
+      "tierDiscounts": [
+        {
+          "minTonnage": 1,
+          "discountPct": 0
+        },
+        {
+          "minTonnage": 5,
+          "discountPct": 3
+        },
+        {
+          "minTonnage": 15,
+          "discountPct": 4.5
+        }
+      ],
+      "recommendedFor": [
+        "Slabs & Beams",
+        "Bridge piers",
+        "Industrial warehouses"
+      ]
+    },
+    {
+      "id": "MAT-TMT-003",
+      "sku": "JSW-NEO-550D-12MM",
+      "erpCode": "ERP-STL-7703",
+      "name": "JSW Neosteel 550D High Strength Rebar",
+      "category": "Steel & Structural",
+      "subCategory": "TMT Rebars",
+      "brand": "JSW Neosteel",
+      "manufacturer": "JSW Steel Ltd.",
+      "badge": "Primary Steel",
+      "tagline": "Clean steel technology with pure virgin iron ore",
+      "rating": 4.8,
+      "reviewsCount": 195,
+      "images": [
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerTonne": 63200,
+      "unit": "Tonne",
+      "hsnCode": "72142090",
+      "gstRate": 18,
+      "specs": {
+        "grade": "Fe 550D",
+        "diameter": "12 mm",
+        "length": "12 Meters",
+        "isStandard": "IS: 1786",
+        "yieldStress": "550 N/mm²",
+        "ultimateTensileStrength": "595 N/mm²",
+        "elongationPercent": "15.5%",
+        "corrosionResistance": "Low P & S impurities (<0.075%)",
+        "weightPerPiece": "10.66 kg / bar",
+        "piecesPerBundle": "8 bars",
+        "bundleWeight": "85.28 kg"
+      },
+      "tierDiscounts": [
+        {
+          "minTonnage": 1,
+          "discountPct": 0
+        },
+        {
+          "minTonnage": 5,
+          "discountPct": 2.8
+        },
+        {
+          "minTonnage": 15,
+          "discountPct": 4.2
+        }
+      ],
+      "recommendedFor": [
+        "Flyovers",
+        "Residential Basements",
+        "Commercial towers"
+      ]
+    },
+    {
+      "id": "MAT-CEM-001",
+      "sku": "UTC-SUPER-PPC-50KG",
+      "erpCode": "ERP-CEM-1010",
+      "name": "UltraTech Super Premium Weather Pro Cement",
+      "category": "Cement & Concrete",
+      "subCategory": "Portland Pozzolana (PPC)",
+      "brand": "UltraTech",
+      "manufacturer": "UltraTech Cement (Aditya Birla Group)",
+      "badge": "India's No. 1",
+      "tagline": "Water-repellent active micro-fillers for dense concrete",
+      "rating": 4.9,
+      "reviewsCount": 512,
+      "images": [
+        "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerBag": 415,
+      "basePricePerTonne": 8300,
+      "unit": "50kg Bag",
+      "hsnCode": "252329",
+      "gstRate": 28,
+      "specs": {
+        "grade": "Engineered PPC (IS 1489 Part 1)",
+        "fineness": "360 m²/kg (Blaine's)",
+        "initialSettingTime": "120 Minutes",
+        "finalSettingTime": "240 Minutes",
+        "compressive28Day": "54.5 MPa (Exceeds 53 Grade specs)",
+        "packaging": "Laminated Tamper-Proof Polypropylene (HDPE)",
+        "waterRepellency": "Damp-lock micro silicone polymers",
+        "shelfLife": "90 days from packing in sealed bag"
+      },
+      "tierDiscounts": [
+        {
+          "minBags": 50,
+          "discountPct": 0
+        },
+        {
+          "minBags": 200,
+          "discountPct": 3.5
+        },
+        {
+          "minBags": 500,
+          "discountPct": 5.5
+        }
+      ],
+      "recommendedFor": [
+        "Roof slab casting",
+        "Sub-structure basement",
+        "External plastering"
+      ]
+    },
+    {
+      "id": "MAT-CEM-002",
+      "sku": "ACC-GOLD-WATER-50KG",
+      "erpCode": "ERP-CEM-1020",
+      "name": "ACC Gold Water Shield Premium Cement",
+      "category": "Cement & Concrete",
+      "subCategory": "Portland Pozzolana (PPC)",
+      "brand": "ACC Limited",
+      "manufacturer": "Adani Cement / ACC Ltd.",
+      "badge": "Water Shield Tech",
+      "tagline": "Built-in anti-seepage formula protecting against dampness",
+      "rating": 4.8,
+      "reviewsCount": 388,
+      "images": [
+        "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerBag": 405,
+      "basePricePerTonne": 8100,
+      "unit": "50kg Bag",
+      "hsnCode": "252329",
+      "gstRate": 28,
+      "specs": {
+        "grade": "Special Waterproof PPC (IS 1489)",
+        "fineness": "350 m²/kg",
+        "initialSettingTime": "115 Minutes",
+        "finalSettingTime": "230 Minutes",
+        "compressive28Day": "52.0 MPa",
+        "packaging": "Moisture-resistant Poly-lined bag",
+        "waterRepellency": "Hydrophobic shield protection",
+        "shelfLife": "90 days from packing"
+      },
+      "tierDiscounts": [
+        {
+          "minBags": 50,
+          "discountPct": 0
+        },
+        {
+          "minBags": 200,
+          "discountPct": 3
+        },
+        {
+          "minBags": 500,
+          "discountPct": 5
+        }
+      ],
+      "recommendedFor": [
+        "Bathrooms & Kitchens",
+        "Retaining walls",
+        "Terrace waterproofing"
+      ]
+    },
+    {
+      "id": "MAT-CEM-003",
+      "sku": "DAL-PRO-OPC53-50KG",
+      "erpCode": "ERP-CEM-1030",
+      "name": "Dalmia DSP HardCem High Early Strength OPC 53",
+      "category": "Cement & Concrete",
+      "subCategory": "Ordinary Portland (OPC 53)",
+      "brand": "Dalmia Bharat",
+      "manufacturer": "Dalmia Cement Ltd.",
+      "badge": "Rapid De-Shuttering",
+      "tagline": "Engineered for high early 3-day and 7-day strength",
+      "rating": 4.7,
+      "reviewsCount": 174,
+      "images": [
+        "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerBag": 425,
+      "basePricePerTonne": 8500,
+      "unit": "50kg Bag",
+      "hsnCode": "252329",
+      "gstRate": 28,
+      "specs": {
+        "grade": "OPC 53 Grade (IS 269:2015)",
+        "fineness": "340 m²/kg",
+        "initialSettingTime": "85 Minutes",
+        "finalSettingTime": "190 Minutes",
+        "compressive28Day": "62.0 MPa (Ultra-High Load)",
+        "packaging": "Laminated Poly-bag",
+        "waterRepellency": "Standard OPC requirement",
+        "shelfLife": "90 days from packing"
+      },
+      "tierDiscounts": [
+        {
+          "minBags": 50,
+          "discountPct": 0
+        },
+        {
+          "minBags": 200,
+          "discountPct": 3
+        },
+        {
+          "minBags": 500,
+          "discountPct": 5.2
+        }
+      ],
+      "recommendedFor": [
+        "Pre-cast members",
+        "High-stress columns",
+        "Commercial pavements"
+      ]
+    },
+    {
+      "id": "MAT-PLB-001",
+      "sku": "AST-CPVC-PRO-1INCH",
+      "erpCode": "ERP-PLB-3011",
+      "name": "Astral CPVC Pro High Pressure Pipe (SDR 11)",
+      "category": "Plumbing & Piping",
+      "subCategory": "CPVC Hot & Cold",
+      "brand": "Astral Pipes",
+      "manufacturer": "Astral Ltd.",
+      "badge": "Lead Free NSF-61",
+      "tagline": "Tested up to 93°C hot water with zero thermal sag",
+      "rating": 4.9,
+      "reviewsCount": 260,
+      "images": [
+        "https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerPipe": 540,
+      "unit": "3 Meter Length",
+      "hsnCode": "391723",
+      "gstRate": 18,
+      "specs": {
+        "standard": "ASTM D2846 & IS: 15778",
+        "pressureRating": "Class 1 (SDR 11 - 28.1 kg/cm² @ 23°C)",
+        "size": "25 mm (1 Inch)",
+        "temperatureRange": "Up to 93°C (200°F)",
+        "corrosionResistance": "100% Non-corrosive & Chlorine resistant",
+        "jointType": "Solvent weld joint"
+      },
+      "recommendedFor": [
+        "Internal hot & cold water plumbing",
+        "Solar water lines"
+      ]
+    },
+    {
+      "id": "MAT-PLB-002",
+      "sku": "ASH-CPVC-FLOW-1INCH",
+      "erpCode": "ERP-PLB-3022",
+      "name": "Ashirvad FlowGuard Plus CPVC Pipe",
+      "category": "Plumbing & Piping",
+      "subCategory": "CPVC Hot & Cold",
+      "brand": "Ashirvad",
+      "manufacturer": "Ashirvad Pipes (Aliaxis Group)",
+      "badge": "Lubrizol Certified",
+      "tagline": "Pioneering technology with antimicrobial inner lining",
+      "rating": 4.8,
+      "reviewsCount": 198,
+      "images": [
+        "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80"
+      ],
+      "basePricePerPipe": 525,
+      "unit": "3 Meter Length",
+      "hsnCode": "391723",
+      "gstRate": 18,
+      "specs": {
+        "standard": "IS: 15778 & ASTM D2846",
+        "pressureRating": "SDR 11 (27.6 kg/cm²)",
+        "size": "25 mm (1 Inch)",
+        "temperatureRange": "Up to 93°C",
+        "corrosionResistance": "Zero calcification & bacteriological safety",
+        "jointType": "FlowGuard solvent cement"
+      },
+      "recommendedFor": [
+        "Concealed wall plumbing",
+        "Apartment riser mains"
+      ]
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP-01",
+      "name": "Kalinga Steel & Infrastructure Hub",
+      "owner": "Ashok Jena",
+      "phone": "+91 94370 12890",
+      "email": "orders@kalingasteelhub.in",
+      "pincode": "751024",
+      "location": "Rasulgarh Industrial Estate, Bhubaneswar",
+      "coordinates": {
+        "lat": 20.3012,
+        "lng": 85.8643
+      },
+      "rating": 4.9,
+      "authorizedBrands": [
+        "Tata Tiscon",
+        "Jindal Panther",
+        "JSW Neosteel"
+      ],
+      "creditDays": 30,
+      "yardCapacityTonnage": 450,
+      "deliveryFleet": [
+        "1.5T Pickup (3 Nos)",
+        "9T 6-Wheeler (4 Nos)",
+        "25T Multi-axle (2 Nos)"
+      ],
+      "paymentTerms": "30% Advance, 70% against site weighbridge challan"
+    },
+    {
+      "id": "SUP-02",
+      "name": "Utkal Super Cement Stockists & Mill Depo",
+      "owner": "Manas Ranjan Sahu",
+      "phone": "+91 98611 44520",
+      "email": "dispatch@utkalcementdepo.com",
+      "pincode": "751010",
+      "location": "Mancheswar Industrial Area, Bhubaneswar",
+      "coordinates": {
+        "lat": 20.3289,
+        "lng": 85.8378
+      },
+      "rating": 4.8,
+      "authorizedBrands": [
+        "UltraTech",
+        "ACC Limited",
+        "Dalmia Bharat"
+      ],
+      "creditDays": 15,
+      "yardCapacityBags": 12000,
+      "deliveryFleet": [
+        "9T Covered Truck (5 Nos)",
+        "16T 10-Wheeler (3 Nos)"
+      ],
+      "paymentTerms": "100% CAD (Cash Against Delivery) or 15-day Credit Line"
+    },
+    {
+      "id": "SUP-03",
+      "name": "Coastal Flow Plumbing & Sanitary Depo",
+      "owner": "Debashis Mohanty",
+      "phone": "+91 99371 88204",
+      "email": "sales@coastalflow.in",
+      "pincode": "751003",
+      "location": "Barmunda Commercial Yard, Bhubaneswar",
+      "coordinates": {
+        "lat": 20.2784,
+        "lng": 85.7981
+      },
+      "rating": 4.9,
+      "authorizedBrands": [
+        "Astral Pipes",
+        "Ashirvad",
+        "Supreme"
+      ],
+      "creditDays": 21,
+      "yardCapacityTonnage": 120,
+      "deliveryFleet": [
+        "1.5T Small Commercial (4 Nos)"
+      ],
+      "paymentTerms": "14-day cycle with verified GST invoice"
+    }
+  ]
+}
