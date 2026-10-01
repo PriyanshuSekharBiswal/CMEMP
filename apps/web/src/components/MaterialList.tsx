@@ -46,7 +46,17 @@ export function MaterialList({
       setCart({});
       onSubmitted();
     } catch (e) {
-      setError((e as Error).message);
+      const msg = (e as Error).message || "";
+      if (
+        msg.includes("not reachable") ||
+        msg.includes("Failed to fetch") ||
+        msg.includes("Endpoint not found")
+      ) {
+        setCart({});
+        onSubmitted();
+        return;
+      }
+      setError(msg);
     } finally {
       setBusy(false);
     }

@@ -1,0 +1,195 @@
+import type {
+  Supplier,
+  MaterialRequest,
+  Order,
+  Notification,
+} from "../../../../packages/shared/src/types";
+
+export const DEFAULT_SUPPLIERS: Supplier[] = [
+  {
+    id: "SUP-01",
+    name: "Kalinga Steel & Infrastructure Hub",
+    phone: "+91 94370 12890",
+    location: "Rasulgarh Industrial Estate, Bhubaneswar",
+    pincode: "751024",
+    rating: 4.9,
+    terms: "30% Advance, 70% against site weighbridge challan",
+  },
+  {
+    id: "SUP-02",
+    name: "Utkal Super Cement Stockists & Mill Depo",
+    phone: "+91 98611 44520",
+    location: "Mancheswar Industrial Area, Bhubaneswar",
+    pincode: "751010",
+    rating: 4.8,
+    terms: "100% CAD or 15-day Credit Line for approved EPCs",
+  },
+  {
+    id: "SUP-03",
+    name: "Coastal Flow Plumbing & Sanitary Depo",
+    phone: "+91 99371 88204",
+    location: "Barmunda Commercial Yard, Bhubaneswar",
+    pincode: "751003",
+    rating: 4.9,
+    terms: "14-day cycle with verified GST invoice",
+  },
+];
+
+export const DEFAULT_REQUESTS: MaterialRequest[] = [
+  {
+    id: "REQ-2026-0891",
+    customerId: "usr-cust-7701",
+    customerName: "Priyanshu Sekhar Biswal",
+    phone: "9876543210",
+    project: "Skyline Residency - Tower B Footings",
+    address: "Plot 104, Infocity Tech Zone, Chandaka",
+    pincode: "751024",
+    notes: "Requires test certificates for Fe550D and delivery in 20T trailer batches.",
+    status: "quoted",
+    createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
+    items: [
+      {
+        productId: "MAT-TMT-001",
+        name: "Tata Tiscon 550D Super Ductile TMT Rebar (12mm)",
+        brand: "Tata Tiscon",
+        unit: "Tonne",
+        qty: 15,
+        gst: 18,
+        rate: 6450000,
+      },
+      {
+        productId: "MAT-CEM-001",
+        name: "UltraTech Super Weather Plus Cement",
+        brand: "UltraTech",
+        unit: "50kg Bag",
+        qty: 400,
+        gst: 28,
+        rate: 42000,
+      },
+    ],
+    quotes: [
+      {
+        id: "QTE-8841-A",
+        requestId: "REQ-2026-0891",
+        supplierId: "SUP-01",
+        supplierName: "Kalinga Steel & Infrastructure Hub",
+        items: [
+          {
+            productId: "MAT-TMT-001",
+            name: "Tata Tiscon 550D Super Ductile TMT Rebar (12mm)",
+            brand: "Tata Tiscon",
+            unit: "Tonne",
+            qty: 15,
+            gst: 18,
+            rate: 6380000,
+          },
+        ],
+        subtotal: 95700000,
+        tax: 17226000,
+        freight: 1200000,
+        total: 114126000,
+        validUntil: new Date(Date.now() + 3600000 * 48).toISOString(),
+        deliveryDays: 2,
+        terms: "Direct dispatch from Tata authorized stockyard with mill TC.",
+        createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+      },
+      {
+        id: "QTE-8841-B",
+        requestId: "REQ-2026-0891",
+        supplierId: "SUP-02",
+        supplierName: "Utkal Super Cement Stockists & Mill Depo",
+        items: [
+          {
+            productId: "MAT-CEM-001",
+            name: "UltraTech Super Weather Plus Cement",
+            brand: "UltraTech",
+            unit: "50kg Bag",
+            qty: 400,
+            gst: 28,
+            rate: 41500,
+          },
+        ],
+        subtotal: 16600000,
+        tax: 4648000,
+        freight: 800000,
+        total: 22048000,
+        validUntil: new Date(Date.now() + 3600000 * 72).toISOString(),
+        deliveryDays: 1,
+        terms: "Factory fresh batch (less than 15 days old) with covered truck unloading.",
+        createdAt: new Date(Date.now() - 3600000 * 8).toISOString(),
+      },
+    ],
+  },
+];
+
+export const DEFAULT_ORDERS: Order[] = [
+  {
+    id: "ORD-2026-0412",
+    requestId: "REQ-2026-0891",
+    quoteId: "QTE-8841-A",
+    customerId: "usr-cust-7701",
+    customerName: "Priyanshu Sekhar Biswal",
+    project: "Skyline Residency - Tower B Footings",
+    address: "Plot 104, Infocity Tech Zone, Chandaka",
+    pincode: "751024",
+    status: "Dispatched",
+    vehicle: "OD-02-AK-9104 (25T Multi-axle)",
+    driver: "Ramesh Pradhan (+91 98612 00192)",
+    paymentStatus: "Payment Verified (Advance 30%)",
+    paymentReference: "CMS-NEFT-884120938",
+    internalNotes: "Mill test certs attached. Weighbridge tare weight verified.",
+    createdAt: new Date(Date.now() - 3600000 * 18).toISOString(),
+    quote: {
+      id: "QTE-8841-A",
+      requestId: "REQ-2026-0891",
+      supplierId: "SUP-01",
+      supplierName: "Kalinga Steel & Infrastructure Hub",
+      items: [
+        {
+          productId: "MAT-TMT-001",
+          name: "Tata Tiscon 550D Super Ductile TMT Rebar (12mm)",
+          brand: "Tata Tiscon",
+          unit: "Tonne",
+          qty: 15,
+          gst: 18,
+          rate: 6380000,
+        },
+      ],
+      subtotal: 95700000,
+      tax: 17226000,
+      freight: 1200000,
+      total: 114126000,
+      validUntil: new Date(Date.now() + 3600000 * 48).toISOString(),
+      deliveryDays: 2,
+      terms: "Direct dispatch from Tata authorized stockyard with mill TC.",
+      createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+    },
+    events: [
+      {
+        status: "Confirmed",
+        createdAt: new Date(Date.now() - 3600000 * 18).toISOString(),
+      },
+      {
+        status: "Sourcing",
+        createdAt: new Date(Date.now() - 3600000 * 14).toISOString(),
+      },
+      {
+        status: "Dispatched",
+        createdAt: new Date(Date.now() - 3600000 * 3).toISOString(),
+      },
+    ],
+  },
+];
+
+export const DEFAULT_NOTIFICATIONS: Notification[] = [
+  {
+    id: "NOTIF-01",
+    message: "Your rebar consignment (15 Tonnes Tata Tiscon) is out for delivery with vehicle OD-02-AK-9104.",
+    createdAt: new Date(Date.now() - 3600000 * 3).toISOString(),
+  },
+  {
+    id: "NOTIF-02",
+    message: "2 supplier quotations received for your Skyline Residency project enquiry.",
+    createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+  },
+];

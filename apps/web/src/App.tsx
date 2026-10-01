@@ -58,8 +58,20 @@ export default function App() {
       );
       setUser(data.user);
       setDemoAuth(data.demoAuth);
+      if (data.user) {
+        localStorage.removeItem("cmemp-demo-user");
+      }
     } catch {
-      setUser(null);
+      try {
+        const stored = localStorage.getItem("cmemp-demo-user");
+        if (stored) {
+          setUser(JSON.parse(stored));
+        } else {
+          setUser(null);
+        }
+      } catch {
+        setUser(null);
+      }
       setDemoAuth(true);
     }
   }
@@ -109,11 +121,12 @@ export default function App() {
   async function logout() {
     try {
       await api("/auth/logout", "POST");
-      setUser(null);
-      navigate("catalogue");
-    } catch (e) {
-      setError((e as Error).message);
+    } catch {
+      /* offline */
     }
+    localStorage.removeItem("cmemp-demo-user");
+    setUser(null);
+    navigate("catalogue");
   }
   return (
     <>

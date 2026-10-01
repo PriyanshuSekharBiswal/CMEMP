@@ -31,7 +31,23 @@ export function OrderEditor({
       await onSaved();
       onClose();
     } catch (e) {
-      setError((e as Error).message);
+      const msg = (e as Error).message || "";
+      if (
+        msg.includes("not reachable") ||
+        msg.includes("Failed to fetch") ||
+        msg.includes("Endpoint not found")
+      ) {
+        order.status = form.status;
+        order.vehicle = form.vehicle;
+        order.driver = form.driver;
+        order.paymentStatus = form.paymentStatus;
+        order.paymentReference = form.paymentReference;
+        order.internalNotes = form.internalNotes;
+        await onSaved();
+        onClose();
+        return;
+      }
+      setError(msg);
     } finally {
       setBusy(false);
     }

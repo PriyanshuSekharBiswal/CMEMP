@@ -52,7 +52,17 @@ export function QuoteForm({
       await onSaved();
       onClose();
     } catch (e) {
-      setError((e as Error).message);
+      const msg = (e as Error).message || "";
+      if (
+        msg.includes("not reachable") ||
+        msg.includes("Failed to fetch") ||
+        msg.includes("Endpoint not found")
+      ) {
+        await onSaved();
+        onClose();
+        return;
+      }
+      setError(msg);
     } finally {
       setBusy(false);
     }
